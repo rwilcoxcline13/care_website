@@ -1,0 +1,1917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI and Us: Ethical AI in Our Communities</title>
+    <link rel="icon" href="/api/placeholder/32/32" type="image/png">
+    <meta name="description" content="Join an exclusive gathering of 40 regional leaders crafting the future of AI governance. Transform how artificial intelligence serves our community.">
+    <style>
+        /* Core Design System Variables */
+        :root {
+            --primary: #2D3436;
+            --accent: #6C5CE7;
+            --gradient-start: #6C5CE7;
+            --gradient-end: #45AAF2;
+            --text: #2D3436;
+            --text-light: #718096;
+            --background: #FFFFFF;
+            --card-bg: #FFFFFF;
+            --shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+            
+            /* Session type colors */
+            --keynote-color: #FF6B6B;
+            --workshop-color: #4ECDC4;
+            --panel-color: #FFD93D;
+            --break-color: #95A5A6;
+        }
+
+        /* Modern CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Modern Container Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Animated Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(-45deg, var(--gradient-start), var(--gradient-end));
+            padding: 2rem;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .hero {
+                background-size: 400% 400%;
+                animation: gradient 15s ease infinite;
+            }
+
+            @keyframes gradient {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .hero h1 {
+                animation: fadeInUp 0.8s ease forwards;
+            }
+
+            .hero p {
+                animation: fadeInUp 0.8s ease 0.2s forwards;
+            }
+
+            @keyframes fadeInUp {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        /* Modern Button Styles */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            background: white;
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            box-shadow: var(--shadow);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .button {
+                animation: fadeInUp 0.8s ease 0.4s forwards;
+            }
+        }
+
+        .button:hover, .button:focus {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -20px rgba(0,0,0,0.2);
+            background: transparent;
+            border-color: white;
+            color: white;
+            outline: none;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .button:hover, .button:focus {
+                transform: none;
+            }
+        }
+
+        /* Enhanced Hero Styles */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(108, 92, 231, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(69, 170, 242, 0.15) 0%, transparent 50%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 3;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .hero-content {
+                animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        @supports (backdrop-filter: blur(10px)) {
+            .hero-badge {
+                backdrop-filter: blur(10px);
+            }
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .hero-badge {
+                animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.2s;
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .hero h1 {
+                animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.4s;
+            }
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #6C5CE7, #45AAF2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .gradient-text {
+                background-size: 200% 200%;
+                animation: gradientFlow 8s ease infinite;
+            }
+
+            @keyframes gradientFlow {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+        }
+
+        .hero-description {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .hero-description {
+                animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.6s;
+            }
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .hero-cta {
+                animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.8s;
+            }
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #6C5CE7, #45AAF2);
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(108, 92, 231, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .cta-button::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+                transform: translateX(-100%) rotate(45deg);
+                transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .cta-button:hover::before, .cta-button:focus::before {
+                transform: translateX(100%) rotate(45deg);
+            }
+        }
+
+        .cta-button:hover, .cta-button:focus {
+            box-shadow: 0 20px 40px rgba(108, 92, 231, 0.3);
+            outline: none;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .cta-button:hover, .cta-button:focus {
+                transform: translateY(-3px);
+            }
+        }
+
+        .button-icon {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .cta-button:hover .button-icon, .cta-button:focus .button-icon {
+                transform: translateX(3px);
+            }
+        }
+
+        .seats-counter {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @supports (backdrop-filter: blur(10px)) {
+            .seats-counter {
+                backdrop-filter: blur(10px);
+            }
+        }
+
+        .counter-icon {
+            width: 24px;
+            height: 24px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .counter-text {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .count {
+            font-weight: 700;
+            color: white;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .hero-badges {
+                animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards 1s;
+            }
+        }
+
+        .category-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .category-badge:hover {
+                transform: translateY(-2px);
+            }
+        }
+
+        .category-badge.government {
+            background: rgba(108, 92, 231, 0.2);
+            color: #6C5CE7;
+        }
+
+        .category-badge.community {
+            background: rgba(69, 170, 242, 0.2);
+            color: #45AAF2;
+        }
+
+        .category-badge.academic {
+            background: rgba(255, 177, 66, 0.2);
+            color: #FFB142;
+        }
+
+        .category-badge.business {
+            background: rgba(46, 213, 115, 0.2);
+            color: #2ED573;
+        }
+
+        /* Impact Section Styles */
+        .impact-section {
+            padding: 8rem 0;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        }
+
+        .impact-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(108, 92, 231, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(69, 170, 242, 0.05) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .impact-grid {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .impact-content {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .impact-content {
+                animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            }
+        }
+
+        .impact-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--text) 30%, var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: var(--text);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .impact-description {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            line-height: 1.7;
+            max-width: 600px;
+        }
+
+        .impact-points {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .impact-point {
+            padding: 2rem;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .impact-point:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            }
+        }
+
+        .impact-point-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .impact-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            border-radius: 12px;
+            color: white;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .impact-point h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .impact-point p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            opacity: 0;
+            transform: translateX(30px);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .impact-stats {
+                animation: fadeInRight 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+                animation-delay: 0.3s;
+            }
+
+            @keyframes fadeInRight {
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .stat-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            }
+        }
+
+        .stat-card:nth-child(1) {
+            grid-column: 1 / -1;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: var(--text);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Community Voice Section Styles */
+        .community-voice-section {
+            padding: 8rem 0;
+            position: relative;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            overflow: hidden;
+        }
+        
+        .voice-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .voice-content {
+                animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            }
+        }
+        
+        .voice-lead {
+            font-size: 1.5rem;
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .voice-questions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .voice-question {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--accent);
+        }
+        
+        @media (prefers-reduced-motion: no-preference) {
+            .voice-question:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            }
+        }
+        
+        .voice-question h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .voice-question p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .voice-cta {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), rgba(69, 170, 242, 0.1));
+            border-radius: 24px;
+            margin-top: 2rem;
+        }
+        
+        .voice-cta p {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: var(--text);
+            margin: 0;
+        }
+
+        /* Stakeholder Section Styles */
+        .stakeholder-section {
+            padding: 8rem 0;
+            position: relative;
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+            overflow: hidden;
+        }
+
+        .stakeholder-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(108, 92, 231, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(69, 170, 242, 0.03) 0%, transparent 40%);
+            z-index: 1;
+        }
+
+        .stakeholder-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stakeholder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .stakeholder-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .stakeholder-card {
+                animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+                animation-delay: calc(var(--i) * 0.1s);
+            }
+
+            .stakeholder-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            }
+        }
+
+        .stakeholder-icon {
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+        }
+
+        .stakeholder-icon svg {
+            width: 80px;
+            height: 80px;
+            color: white;
+        }
+
+        .stakeholder-details {
+            padding: 2rem;
+        }
+
+        .stakeholder-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .stakeholder-description {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .goals-list {
+            margin-top: 4rem;
+        }
+
+        .goal-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .goal-item {
+                animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+                animation-delay: calc(var(--i) * 0.15s);
+            }
+
+            .goal-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            }
+        }
+
+        .goal-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: var(--text);
+            line-height: 1;
+        }
+
+        .goal-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .goal-content p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Speakers Section */
+        .speakers-section {
+            padding: 8rem 0;
+            position: relative;
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+            overflow: hidden;
+        }
+
+        .section-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(108, 92, 231, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(69, 170, 242, 0.03) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .section-header {
+                animation: fadeInUp 0.8s ease forwards;
+            }
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 3vw, 2.5rem);
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .speaker-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+            position: relative;
+            isolation: isolate;
+        }
+
+        .speaker-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: -1;
+            border-radius: 24px;
+            transform: scale(0.98);
+        }
+
+        .speaker-card.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .speaker-card:hover {
+                transform: translateY(-10px) scale(1.02);
+                box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+            }
+
+            .speaker-card:hover::before {
+                opacity: 0.05;
+            }
+        }
+
+        .speaker-image-container {
+            position: relative;
+            padding-top: 100%;
+            overflow: hidden;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .speaker-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: grayscale(20%);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .speaker-card:hover .speaker-image {
+                transform: scale(1.08) translateY(-2%);
+                filter: grayscale(0%);
+            }
+        }
+
+        .speaker-info {
+            padding: 2rem;
+            position: relative;
+            background: linear-gradient(
+                180deg,
+                rgba(255,255,255,0.9) 0%,
+                rgba(255,255,255,1) 20%
+            );
+            margin-top: -2rem;
+            border-radius: 24px 24px 0 0;
+            transition: transform 0.3s ease;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .speaker-card:hover .speaker-info {
+                transform: translateY(-8px);
+            }
+        }
+
+        .speaker-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--text) 30%, var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .speaker-role {
+            font-size: 1rem;
+            color: var(--accent);
+            margin-bottom: 1.25rem;
+            font-weight: 500;
+        }
+
+        .speaker-bio {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 1.75rem;
+            line-height: 1.7;
+            transition: color 0.3s ease;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .speaker-card:hover .speaker-bio {
+                color: var(--text);
+            }
+        }
+
+        .speaker-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .speaker-topic {
+            font-size: 0.8rem;
+            padding: 0.25rem 0.75rem;
+            background: rgba(108, 92, 231, 0.1);
+            color: var(--accent);
+            border-radius: 20px;
+        }
+
+        /* Timeline Section */
+        .timeline-container {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        .timeline-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .timeline-header {
+                animation: fadeInUp 0.8s ease forwards;
+            }
+        }
+
+        .timeline-header h2 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .timeline-track {
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            /* Change the starting position to begin after the header */
+            top: 120px; /* Approximate height of the header section */
+            /* Calculate height based on timeline events, not container height */
+            height: calc(100% - 120px - 2rem); /* Subtract header height and bottom padding */
+            background: linear-gradient(180deg, 
+                var(--gradient-start) 0%, 
+                var(--gradient-end) 100%);
+            transform: translateX(-50%);
+            opacity: 0.3;
+        }
+
+        /* The progress bar would need the same adjustments */
+        .timeline-progress {
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            top: 120px; /* Match the track's top value */
+            background: linear-gradient(180deg, 
+                var(--gradient-start) 0%, 
+                var(--gradient-end) 100%);
+            transform: translateX(-50%);
+            height: 0%;
+            transition: height 0.5s ease;
+            will-change: height;
+        }
+
+        .timeline-event {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 4rem 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: var(--transition);
+            will-change: opacity, transform;
+        }
+
+        /* Ensure timeline is visible even without JS */
+        body:not(.js-enabled) .timeline-event {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-event.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-event:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: calc(50% - 3rem);
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .timeline-event.highlight .timeline-content {
+            box-shadow: 0 0 0 3px var(--accent), var(--shadow);
+            transform: translateY(-8px);
+        }
+
+        .timeline-dot {
+            width: 24px;
+            height: 24px;
+            background: white;
+            border: 4px solid var(--accent);
+            border-radius: 50%;
+            margin: 0 2rem;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+            transition: var(--transition);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .timeline-event:hover .timeline-dot {
+                transform: scale(1.2);
+                border-color: var(--gradient-start);
+            }
+        }
+
+        .timeline-time {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .timeline-description {
+            color: var(--text-light);
+        }
+
+        .timeline-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .timeline-tag {
+            padding: 0.25rem 1rem;
+            background: rgba(108, 92, 231, 0.1);
+            color: var(--accent);
+            border-radius: 20px;
+            font-size: 0.875rem;
+        }
+
+        .session-keynote .timeline-content {
+            border-left: 4px solid var(--keynote-color);
+        }
+
+        .session-workshop .timeline-content {
+            border-left: 4px solid var(--workshop-color);
+        }
+
+        .session-panel .timeline-content {
+            border-left: 4px solid var(--panel-color);
+        }
+
+        .session-break .timeline-content {
+            border-left: 4px solid var(--break-color);
+        }
+
+        .timeline-progress-indicator {
+            position: fixed;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 100;
+        }
+
+        .progress-dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(108, 92, 231, 0.2);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .progress-dot.active {
+            background: var(--accent);
+            transform: scale(1.2);
+        }
+
+        /* Footer Styles */
+        .footer-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .footer-organizers, .footer-sponsors, .footer-registration {
+            text-align: center;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .footer-section p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+        
+        .qr-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .qr-container p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 1024px) {
+            .impact-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .impact-stats {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            .stakeholder-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            
+            .voice-questions {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 1rem;
+            }
+
+            .hero-content {
+                padding: 2rem 1rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-badges {
+                gap: 0.5rem;
+            }
+
+            .category-badge {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+            
+            .impact-section {
+                padding: 4rem 0;
+            }
+
+            .impact-points {
+                gap: 1.5rem;
+            }
+
+            .stat-card {
+                padding: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .voice-lead {
+                font-size: 1.3rem;
+            }
+            
+            .voice-cta p {
+                font-size: 1.5rem;
+            }
+            
+            .timeline-event {
+                flex-direction: column !important;
+                align-items: center;
+                margin: 2rem 0;
+            }
+
+            .timeline-content {
+                width: calc(100% - 4rem);
+                margin-top: 1rem;
+            }
+
+            .timeline-track {
+                left: 2rem;
+            }
+
+            .timeline-progress {
+                left: 2rem;
+            }
+
+            .timeline-progress-indicator {
+                display: none;
+            }
+            
+            .speakers-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .speaker-card {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+
+    <!-- This empty style section is intentionally removed -->
+</head>
+<body>
+    <!-- Hero Section -->
+    <div id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">June 4, 2025 • Boston University Center for Data Science</div>
+            <h1>AI and Us: <br><span class="gradient-text">Ethical AI in Our Communities</span></h1>
+            <p class="hero-description">Join an exclusive gathering of 40 regional leaders crafting the future of AI governance. Transform how artificial intelligence serves our community.</p>
+            <div class="hero-cta">
+                <a href="https://vr5qaz5e9jp.typeform.com/to/HKrdyEVN" class="cta-button">
+                    <span>Request Your Invitation</span>
+                    <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <div class="seats-counter">
+                    <div class="counter-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="counter-text">
+                        <span class="count">40</span> seats available
+                    </div>
+                </div>
+            </div>
+            <div class="hero-badges">
+                <div class="category-badge government">Government Officials</div>
+                <div class="category-badge community">Community Leaders</div>
+                <div class="category-badge academic">Academic/Research</div>
+                <div class="category-badge business">Business/Technology</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conference Impact Section -->
+    <section id="impact" class="impact-section">
+        <div class="impact-background"></div>
+        <div class="container">
+            <div class="impact-grid">
+                <div class="impact-content">
+                    <h2 class="impact-title">Shaping the Future of Local AI Governance</h2>
+                    <p class="impact-description">
+                        As artificial intelligence transforms our communities, local leaders face a critical moment. This isn't just another technology conference—it's a carefully curated gathering of 40 decision-makers who will shape how AI serves our community's needs.
+                    </p>
+                    <div class="impact-points">
+                        <div class="impact-point">
+                            <div class="impact-point-header">
+                                <div class="impact-icon">
+                                    <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                    </svg>
+                                </div>
+                                <h3>Real Implementation, Not Theory</h3>
+                            </div>
+                            <p>Move beyond abstract discussions to develop practical frameworks for implementing AI in local governance, ensuring your community stays ahead of technological change.</p>
+                        </div>
+                        <div class="impact-point">
+                            <div class="impact-point-header">
+                                <div class="impact-icon">
+                                    <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" role="img" aria-label="Community icon">
+                                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                                    </svg>
+                                </div>
+                                <h3>Direct Community Impact</h3>
+                            </div>
+                            <p>Develop strategies that ensure AI technology serves all members of your community, addressing equity, accessibility, and inclusive growth.</p>
+                        </div>
+                        <div class="impact-point">
+                            <div class="impact-point-header">
+                                <div class="impact-icon">
+                                    <svg viewBox="0 0 24 24" class="icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" role="img" aria-label="Checkmark icon">
+                                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                        <path d="M22 4L12 14.01l-3-3"/>
+                                    </svg>
+                                </div>
+                                <h3>Immediate Action Steps</h3>
+                            </div>
+                            <p>Leave with concrete action plans and resources for implementing ethical AI governance in your jurisdiction, supported by ongoing working groups.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="impact-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">40</div>
+                        <div class="stat-label">Decision Makers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Working Groups</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Month Roadmap</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Voice Section -->
+    <section id="community-voice" class="community-voice-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Our Communities Need a Voice</h2>
+                <p>Ensuring AI technologies serve everyone, not just the privileged few</p>
+            </div>
+            
+            <div class="voice-content">
+                <p class="voice-lead">Whether we are aware of it or not, artificial intelligence is now part of our lives in countless ways. But who has the power to control how, to whom, with whom, and in what ways AI has dominance and influence over all of us?</p>
+                
+                <div class="voice-questions">
+                    <div class="voice-question">
+                        <h3>Who Controls AI?</h3>
+                        <p>What and where is AI now as we understand it at the local level, national, and international level? Who controls what data sets go into AI development and applications?</p>
+                    </div>
+                    
+                    <div class="voice-question">
+                        <h3>Is It Truly Inclusive?</h3>
+                        <p>How is AI inclusive and complete, representing everything that is the truth? How do we know it is equitable, just, and ethical?</p>
+                    </div>
+                    
+                    <div class="voice-question">
+                        <h3>Who Creates These Systems?</h3>
+                        <p>Who are the talents working in this field? How diverse are their perspectives and what lived experiences do they bring to the table to create a comprehensive view of humanity?</p>
+                    </div>
+                    
+                    <div class="voice-question">
+                        <h3>Can We Still Shape the Future?</h3>
+                        <p>Realistically, AI is here to stay. Hopefully, it is not too late, but tech savvy and community folks alike urgently need to be in the know and in all the actions to shape this new world of technology and AI powered ways of life.</p>
+                    </div>
+                </div>
+                
+                <div class="voice-cta">
+                    <p>We demand attention, conversations, and actions around "AI and Us."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stakeholder Section -->
+    <section id="stakeholders" class="stakeholder-section">
+        <div class="stakeholder-background"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2>Bringing Diverse Stakeholders Together</h2>
+                <p>Collaborative solutions require diverse perspectives and collective action</p>
+            </div>
+            
+            <div class="stakeholder-content">
+                <div class="stakeholder-grid">
+                    <div class="stakeholder-card" style="--i: 1;">
+                        <div class="stakeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true" role="img" aria-label="Government icon">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <div class="stakeholder-details">
+                            <h3 class="stakeholder-title">Government Officials</h3>
+                            <p class="stakeholder-description">Leaders who shape policy and establish governance frameworks that will determine how AI is regulated, deployed, and monitored in public services.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stakeholder-card" style="--i: 2;">
+                        <div class="stakeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true" role="img" aria-label="Community leaders icon">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <div class="stakeholder-details">
+                            <h3 class="stakeholder-title">Community Leaders</h3>
+                            <p class="stakeholder-description">Advocates who understand the unique needs of diverse populations and can ensure AI implementation addresses rather than amplifies existing disparities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stakeholder-card" style="--i: 3;">
+                        <div class="stakeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true" role="img" aria-label="Technology experts icon">
+                                <path d="M12 20V10M18 20V4M6 20v-6"/>
+                            </svg>
+                        </div>
+                        <div class="stakeholder-details">
+                            <h3 class="stakeholder-title">Technology Experts</h3>
+                            <p class="stakeholder-description">Professionals who understand AI capabilities and limitations, helping to translate complex technical concepts into practical solutions for community benefit.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stakeholder-card" style="--i: 4;">
+                        <div class="stakeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true" role="img" aria-label="Academia icon">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                        </div>
+                        <div class="stakeholder-details">
+                            <h3 class="stakeholder-title">Academia & Research</h3>
+                            <p class="stakeholder-description">Scholars who bring evidence-based approaches and ethical frameworks to ensure AI development is grounded in research and long-term thinking.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stakeholder-card" style="--i: 5;">
+                        <div class="stakeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true" role="img" aria-label="Youth icon">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="9" r="4"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <div class="stakeholder-details">
+                            <h3 class="stakeholder-title">Students and Youth</h3>
+                            <p class="stakeholder-description">Next-generation leaders who bring fresh perspectives and will live with the long-term impact of today's AI governance decisions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stakeholder-card" style="--i: 6;">
+                        <div class="stakeholder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true" role="img" aria-label="Business icon">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <div class="stakeholder-details">
+                            <h3 class="stakeholder-title">Business Leaders</h3>
+                            <p class="stakeholder-description">Industry stakeholders who play a vital role in implementing AI solutions in ways that are both economically viable and socially responsible.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="goals-list">
+                    <h2 class="impact-title" style="text-align: center; margin-bottom: 3rem;">Conference Goals</h2>
+                    
+                    <div class="goal-item" style="--i: 1;">
+                        <div class="goal-number">1</div>
+                        <div class="goal-content">
+                            <h3>Develop Ethical Guidelines</h3>
+                            <p>Create a community-centered ethical framework that reflects our region's diverse needs and values while providing practical guidance for AI implementation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="goal-item" style="--i: 2;">
+                        <div class="goal-number">2</div>
+                        <div class="goal-content">
+                            <h3>Establish Oversight Mechanisms</h3>
+                            <p>Design community oversight structures that ensure transparency, accountability, and public input in how AI technologies are deployed in public services.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="goal-item" style="--i: 3;">
+                        <div class="goal-number">3</div>
+                        <div class="goal-content">
+                            <h3>Build Cross-Sector Partnerships</h3>
+                            <p>Form lasting working relationships between government, community organizations, academia, and the technology sector to ensure ongoing collaboration.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="goal-item" style="--i: 4;">
+                        <div class="goal-number">4</div>
+                        <div class="goal-content">
+                            <h3>Create Implementation Roadmap</h3>
+                            <p>Develop a 12-month action plan with clear milestones to move from ideas to practical implementation, ensuring momentum continues beyond the conference.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section with Pre-Populated Events -->
+    <div id="timeline" class="timeline-container">
+        <div class="timeline-header">
+            <h2>Conference Schedule</h2>
+        </div>
+
+        <div class="timeline-track"></div>
+        <div class="timeline-progress" id="timeline-progress"></div>
+
+        <div class="timeline-progress-indicator" id="progress-indicator">
+            <!-- Progress dots will be added by JavaScript -->
+        </div>
+
+        <div class="timeline-events" id="timeline-events">
+            <!-- Pre-populated timeline events -->
+            <div class="timeline-event session-break">
+                <div class="timeline-content">
+                    <div class="timeline-time">8:30 - 9:00 AM</div>
+                    <h3 class="timeline-title">Registration & Networking</h3>
+                    <p class="timeline-description">Begin your day with light breakfast and meaningful connections with fellow innovators.</p>
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">Networking</span>
+                        <span class="timeline-tag">Registration</span>
+                    </div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            
+            <div class="timeline-event session-keynote">
+                <div class="timeline-content">
+                    <div class="timeline-time">9:00 - 9:15 AM</div>
+                    <h3 class="timeline-title">Welcome & Opening Remarks</h3>
+                    <p class="timeline-description">Setting the stage for a day of collaborative innovation in AI governance.</p>
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">Opening</span>
+                        <span class="timeline-tag">Keynote</span>
+                    </div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            
+            <div class="timeline-event session-keynote">
+                <div class="timeline-content">
+                    <div class="timeline-time">9:15 - 10:00 AM</div>
+                    <h3 class="timeline-title">Opening Keynote: AI in Community</h3>
+                    <p class="timeline-description">Exploring opportunities and responsibilities in community-focused AI implementation.</p>
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">Keynote</span>
+                        <span class="timeline-tag">Community Impact</span>
+                    </div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            
+            <div class="timeline-event session-panel">
+                <div class="timeline-content">
+                    <div class="timeline-time">10:00 - 10:45 AM</div>
+                    <h3 class="timeline-title">Expert Panel Discussion</h3>
+                    <p class="timeline-description">Distinguished experts discuss balancing innovation with ethical considerations.</p>
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">Panel</span>
+                        <span class="timeline-tag">Ethics</span>
+                        <span class="timeline-tag">Innovation</span>
+                    </div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            
+            <div class="timeline-event session-workshop">
+                <div class="timeline-content">
+                    <div class="timeline-time">11:00 - 12:00 PM</div>
+                    <h3 class="timeline-title">Interactive Workshop: Mapping AI Challenges</h3>
+                    <p class="timeline-description">Collaborative session to identify and prioritize key challenges in AI governance.</p>
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">Workshop</span>
+                        <span class="timeline-tag">Collaboration</span>
+                        <span class="timeline-tag">Challenges</span>
+                    </div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            
+            <div class="timeline-event session-break">
+                <div class="timeline-content">
+                    <div class="timeline-time">12:00 - 1:00 PM</div>
+                    <h3 class="timeline-title">Working Lunch & Lightning Talks</h3>
+                    <p class="timeline-description">Engaging lightning talks while enjoying lunch and networking opportunities.</p>
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">Lunch</span>
+                        <span class="timeline-tag">Networking</span>
+                        <span class="timeline-tag">Lightning Talks</span>
+                    </div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            
+            <div class="timeline-event session-workshop">
+                <div class="timeline-content">
+                    <div class="timeline-time">1:00 - 2:40 PM</div>
+                    <h3 class="timeline-title">Rotating Discussion Stations</h3>
+                    <p class="timeline-description">Five 20-minute interactive sessions covering implementation, ethics, community impact, and more.</p>
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">Workshop</span>
+                        <span class="timeline-tag">Interactive</span>
+                        <span class="timeline-tag">Discussion</span>
+                    </div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            
+            <div class="timeline-event session-workshop">
+                <div class="timeline-content">
+                    <div class="timeline-time">2:45 - 3:45 PM</div>
+                    <h3 class="timeline-title">Solution Development Workshop</h3>
+                    <p class="timeline-description">Collaborative workshop to develop comprehensive proposals and action plans.</p>
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">Workshop</span>
+                        <span class="timeline-tag">Collaboration</span>
+                        <span class="timeline-tag">Solutions</span>
+                    </div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            
+            <div class="timeline-event session-keynote">
+                <div class="timeline-content">
+                    <div class="timeline-time">4:00 - 4:45 PM</div>
+                    <h3 class="timeline-title">Commitment to Action</h3>
+                    <p class="timeline-description">Group presentations, next steps, and formation of ongoing working groups.</p>
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">Closing</span>
+                        <span class="timeline-tag">Action Items</span>
+                        <span class="timeline-tag">Commitments</span>
+                    </div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="register" class="footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-organizers">
+                    <h3>Organized by</h3>
+                    <p>CARE, ArtifexAI</p>
+                    <p><a href="https://www.care4eduequity.org/" style="color: rgba(255, 255, 255, 0.8); text-decoration: underline;">CARE</a></p>
+                    <p><a href="https://artifexai.io" style="color: rgba(255, 255, 255, 0.8); text-decoration: underline;">ArtifexAI</a></p>
+                </div>
+                
+                <div class="footer-sponsors">
+                    <h3>With support from</h3>
+                    <p>Boston University Center for Data Science, BU Spark, Fuji Group</p>
+                    <p><a href="https://www.bu.edu/datascience/" style="color: rgba(255, 255, 255, 0.8); text-decoration: underline;">Learn more about our sponsors</a></p>
+                </div>
+                
+                <div class="footer-registration">
+                    <h3>Ready to Join Us?</h3>
+                    <p style="margin-top: 1rem;">
+                        <a href="https://vr5qaz5e9jp.typeform.com/to/HKrdyEVN" style="color: white; background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; display: inline-block;">Register Online</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript to make the timeline work - Improved version -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cache DOM elements to avoid repeated queries
+            const timelineContainer = document.querySelector('.timeline-container');
+            const progressBar = document.getElementById('timeline-progress');
+            const progressIndicator = document.getElementById('progress-indicator');
+            const timelineEvents = document.querySelectorAll('.timeline-event');
+            
+            // Only proceed if timeline elements exist
+            if (!timelineContainer || !progressBar || !timelineEvents.length) return;
+            
+            // Create progress indicator dots with event delegation
+            progressIndicator.innerHTML = '';
+            timelineEvents.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('progress-dot');
+                dot.dataset.index = index;
+                progressIndicator.appendChild(dot);
+            });
+            
+            // Use event delegation for dot clicks
+            progressIndicator.addEventListener('click', function(e) {
+                if (e.target.classList.contains('progress-dot')) {
+                    const index = parseInt(e.target.dataset.index);
+                    if (timelineEvents[index]) {
+                        timelineEvents[index].scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+            
+            // Use throttled scroll handler for better performance
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        updateTimeline();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+            
+            // Initial state - ensure at least first item is visible
+            timelineEvents[0].classList.add('visible');
+            
+            // Add fallback for non-JS browsers
+            document.body.classList.add('js-enabled');
+            
+            // Update everything on load
+            updateTimeline();
+            
+            // Comprehensive update function
+            function updateTimeline() {
+                const containerRect = timelineContainer.getBoundingClientRect();
+                const containerTop = containerRect.top;
+                const containerHeight = containerRect.height;
+                const windowHeight = window.innerHeight;
+                
+                // Calculate progress percentage with better viewport awareness
+                let progress = 0;
+                if (containerTop <= windowHeight * 0.8 && containerTop + containerHeight >= 0) {
+                    progress = Math.min(
+                        100,
+                        Math.max(
+                            0,
+                            ((windowHeight * 0.8 - containerTop) / (containerHeight + windowHeight * 0.6)) * 100
+                        )
+                    );
+                } else if (containerTop + containerHeight < 0) {
+                    progress = 100; // Timeline is above viewport
+                }
+                
+                // Update progress bar
+                progressBar.style.height = `${progress}%`;
+                
+                // Check visibility of each event and update dots
+                let closestEventIndex = 0;
+                let closestDistance = Infinity;
+                
+                timelineEvents.forEach((event, index) => {
+                    const eventRect = event.getBoundingClientRect();
+                    const eventMiddle = eventRect.top + eventRect.height / 2;
+                    const distanceFromCenter = Math.abs(eventMiddle - windowHeight / 2);
+                    
+                    // Update visibility
+                    if (eventRect.top < windowHeight * 0.8 && eventRect.bottom >= 0) {
+                        event.classList.add('visible');
+                    }
+                    
+                    // Find closest event to viewport center
+                    if (distanceFromCenter < closestDistance) {
+                        closestDistance = distanceFromCenter;
+                        closestEventIndex = index;
+                    }
+                });
+                
+                // Update active dots with more accurate focusing
+                const dots = document.querySelectorAll('.progress-dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index <= closestEventIndex);
+                });
+            }
+            
+            // Handle window resize events
+            window.addEventListener('resize', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        updateTimeline();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
